@@ -31,10 +31,12 @@ rec {
         pkgs = import nixpkgs {
           inherit system;
           overlays = [
+            # Not sure why this can't be self.overlay but whatever
             self.overlay.${system}
           ];
         };
-        kernel = pkgs.linux;
+        # TODO: figure out how to make it available on all (most) kernels
+        kernel = pkgs.linuxPackages_latest.kernel;
       in
       rec {
         packages = {
@@ -56,7 +58,7 @@ rec {
         };
 
         overlay = (final: prev: {
-          inherit (packages) ipu6-drivers ivsc-driver ipu6-camera-bins ipu6-camera-hal icamerasrc;
+          inherit (self.packages.${system}) ipu6-drivers ivsc-driver ipu6-camera-bins ipu6-camera-hal icamerasrc;
         });
 
         formatter = pkgs.nixpkgs-fmt;

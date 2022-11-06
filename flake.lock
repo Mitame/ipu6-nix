@@ -96,6 +96,22 @@
         "type": "github"
       }
     },
+    "ivsc-firmware-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1667355668,
+        "narHash": "sha256-GuD1oTnDEs0HslJjXx26DkVQIe0eS+js4UoaTDa77ME=",
+        "owner": "intel",
+        "repo": "ivsc-firmware",
+        "rev": "29c5eff4cdaf83e90ef2dcd2035a9cdff6343430",
+        "type": "github"
+      },
+      "original": {
+        "owner": "intel",
+        "repo": "ivsc-firmware",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1667639549,
@@ -118,6 +134,7 @@
         "ipu6-camera-hal-src": "ipu6-camera-hal-src",
         "ipu6-drivers-src": "ipu6-drivers-src",
         "ivsc-driver-src": "ivsc-driver-src",
+        "ivsc-firmware-src": "ivsc-firmware-src",
         "nixpkgs": "nixpkgs"
       }
     }

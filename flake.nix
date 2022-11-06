@@ -31,14 +31,12 @@ rec {
         pkgs = import nixpkgs {
           inherit system;
           overlays = [
-            (super: self': {
-              inherit (self.packages.${system}) ipu6-drivers ivsc-driver ipu6-camera-bins ipu6-camera-hal icamerasrc;
-            })
+            self.overlay.${system}
           ];
         };
         kernel = pkgs.linux;
       in
-      {
+      rec {
         packages = {
           ipu6-drivers = pkgs.callPackage ./ipu6-drivers.nix {
             inherit ipu6-drivers-src ivsc-driver-src kernel;
@@ -56,6 +54,11 @@ rec {
             inherit icamerasrc-src;
           };
         };
+
+        overlay = (final: prev: {
+          inherit (packages) ipu6-drivers ivsc-driver ipu6-camera-bins ipu6-camera-hal icamerasrc;
+        });
+
         formatter = pkgs.nixpkgs-fmt;
       }
     );

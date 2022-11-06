@@ -1,8 +1,11 @@
-{ stdenv, lib, ivsc-firmware-src, ...}: stdenv.mkDerivation {
+{ stdenv, lib, ivsc-firmware-src, ... }: stdenv.mkDerivation {
   name = "ivsc-firmware";
   version = "0.0.0";
 
   src = ivsc-firmware-src;
+
+  # The driver hardcodes the path without xz, so disable compression for now
+  passthru.compressFirmware = false;
 
   installPhase = ''
     # The files need to be moved such that
@@ -24,5 +27,5 @@
       Firmware for the Intel Vision Sensing Controller(IVSC) on Intel Alder Lake platforms
     '';
   };
- 
+
 }

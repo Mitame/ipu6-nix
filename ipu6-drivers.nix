@@ -10,9 +10,6 @@ stdenv.mkDerivation rec {
   src = ipu6-drivers-src;
 
   nativeBuildInputs = kernel.moduleBuildDependencies;
-  propagatedBuildInputs = [
-    pkgs.ivsc-driver
-  ];
 
   buildFlags = [
     "KERNEL_SRC=${kernelSrc}"

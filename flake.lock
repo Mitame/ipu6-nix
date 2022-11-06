@@ -1,0 +1,127 @@
+{
+  "nodes": {
+    "flake-utils": {
+      "locked": {
+        "lastModified": 1667395993,
+        "narHash": "sha256-nuEHfE/LcWyuSWnS8t12N1wc105Qtau+/OdUAjtQ0rA=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "5aed5285a952e0b949eb3ba02c12fa4fcfef535f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "icamerasrc-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1664346769,
+        "narHash": "sha256-6kYU0KqhgJnFGANwlCwUYpk5KWgcXVLFQwp8vZIa0fQ=",
+        "owner": "intel",
+        "repo": "icamerasrc",
+        "rev": "3b7cdb93071360aacebb4e808ee71bb47cf90b30",
+        "type": "github"
+      },
+      "original": {
+        "owner": "intel",
+        "ref": "icamerasrc_slim_api",
+        "repo": "icamerasrc",
+        "type": "github"
+      }
+    },
+    "ipu6-camera-bins-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1666343574,
+        "narHash": "sha256-Vl+l43Ed2f7lL/iXG59wdrfyTrTohaYlL79+zDw805E=",
+        "owner": "intel",
+        "repo": "ipu6-camera-bins",
+        "rev": "9874603336d97fd4d12a271485645aaabc7c1be3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "intel",
+        "repo": "ipu6-camera-bins",
+        "type": "github"
+      }
+    },
+    "ipu6-camera-hal-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1665453886,
+        "narHash": "sha256-o62ce5a1gqVMccOnfw9lto32sXutZtiV2BFUNATyiww=",
+        "owner": "intel",
+        "repo": "ipu6-camera-hal",
+        "rev": "8bad42ce759a0bef504f03a7d1dd91510290cfeb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "intel",
+        "repo": "ipu6-camera-hal",
+        "type": "github"
+      }
+    },
+    "ipu6-drivers-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1666859387,
+        "narHash": "sha256-y3oxKdcAZXSe5tjhTOX018LsDEf5kh3bkClK8TwtdOQ=",
+        "owner": "intel",
+        "repo": "ipu6-drivers",
+        "rev": "10e247e046086970a9427988d5a454676515e43b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "intel",
+        "repo": "ipu6-drivers",
+        "type": "github"
+      }
+    },
+    "ivsc-driver-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1663316675,
+        "narHash": "sha256-STg2yLxavS3nb95ioljGFi6I4skSsQ1JQfrmq+d+CKg=",
+        "owner": "intel",
+        "repo": "ivsc-driver",
+        "rev": "99a53bd7160452bbbcc26bcb662cad33c13b36d1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "intel",
+        "repo": "ivsc-driver",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1667639549,
+        "narHash": "sha256-frqZKSG/933Ctwl9voSZnXDwo8CqddXcjQhnCzwNqaM=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "cae3751e9f74eea29c573d6c2f14523f41c2821a",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "type": "indirect"
+      }
+    },
+    "root": {
+      "inputs": {
+        "flake-utils": "flake-utils",
+        "icamerasrc-src": "icamerasrc-src",
+        "ipu6-camera-bins-src": "ipu6-camera-bins-src",
+        "ipu6-camera-hal-src": "ipu6-camera-hal-src",
+        "ipu6-drivers-src": "ipu6-drivers-src",
+        "ivsc-driver-src": "ivsc-driver-src",
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

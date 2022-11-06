@@ -9,11 +9,11 @@
 
   installPhase = ''
     # The files need to be moved such that
-    # ./firmware/a.bin -> /lib/firmware/vsc/soc_a1_prod/a_prod.bin
+    # ./firmware/fw.bin -> /lib/firmware/vsc/soc_a1_prod/fw_a1_prod.bin
     mkdir -p $out/lib/firmware/vsc/soc_a1_prod/
     for f in ./firmware/*.bin; do
       newName="$(basename $f)"
-      newName="''${newName%%.bin}_prod.bin"
+      newName="''${newName%%.bin}_a1_prod.bin"
       mv "$f" "$out/lib/firmware/vsc/soc_a1_prod/$newName"
     done
   '';
